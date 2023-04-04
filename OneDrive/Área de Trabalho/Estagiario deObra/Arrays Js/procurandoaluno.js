@@ -8,8 +8,11 @@ const listaDeAlunosEMedias = [alunos, medias];
 function exibeNomeENota(aluno){
     if (listaDeAlunosEMedias[0].includes(aluno)){
         console.log(`${aluno} está cadastrado.`)
-        const indice = listaDeAlunosEMedias[0].indexOf(aluno)
-        const mediaDoAluno = listaDeAlunosEMedias[1][indice]
+
+        const [alunos,medias] = listaDeAlunosEMedias
+        const indice = alunos.indexOf(aluno)
+        
+        const mediaDoAluno = medias[indice]
         console.log(`A média de ${aluno} é ${mediaDoAluno}.`)
     }
     else {
